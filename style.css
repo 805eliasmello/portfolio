@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url(./assets/bg-desktop.jpg) no-repeat top center/cover;
+    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
     font-family: "Inter", sans-serif;
     color: white;
 }
