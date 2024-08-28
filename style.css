@@ -5,17 +5,15 @@
 }
 
 body {
-    background: url(./assets/bg-desktop.jpg) no-repeat top center/cover;
+    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
     font-family: "Inter", sans-serif;
     color: white;
 }
 
-#container {
-    width: 100%;
-    max-width: 1200px; /* Ajusta a largura máxima do container para telas maiores */
+#container {   
+    width: 360px;
     margin: 56px auto 0px;
     text-align: center;
-    padding: 0 20px; /* Adiciona algum padding para evitar que o conteúdo encoste nas bordas da tela */
 }
 
 #profile {
@@ -24,22 +22,22 @@ body {
 
 #profile img {
     display: block;
-    width: 150px; /* Aumenta o tamanho da imagem de perfil para desktop */
+    width: 90px;
     margin: auto;
     padding: 4px;
-    border-radius: 50%;
+    border-radius: 50%; /* Para deixar a imagem circular */
 }
 
 #profile p {
     font-weight: 400;
-    font-size: 18px; /* Aumenta o tamanho da fonte para desktop */
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 16px;
     margin-top: 8px;
 }
 
 #profile p1 {
     font-weight: 400;
-    font-size: 12px; /* Aumenta o tamanho da fonte para desktop */
+    font-size: 10px;
     line-height: 16px;
     margin-top: 8px;
 }
@@ -47,38 +45,40 @@ body {
 ul {
     list-style: none;
     display: flex;
-    flex-direction: row; /* Muda a direção para linha no desktop */
-    justify-content: center;
-    gap: 32px; /* Aumenta o espaçamento entre os itens no desktop */
+    flex-direction: column;
+    gap: 16px; /* Espaçamento entre os itens */
     padding: 0;
-    margin-top: 32px; /* Aumenta o espaço entre o @ e os links no desktop */
+    margin-top: 16px; /* Espaço entre o @ e os links */
 }
 
 ul li a {
+    
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 16px 24px;
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    border-radius: 8px; /* Para deixar as caixas com bordas arredondadas */
     text-decoration: none;
-    color: white;
+    color: white; /* Mantém o texto branco */
+    font-weight: 500;
     font-weight: bold;
+    
 }
 
 ul li a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2); /* Efeito ao passar o mouse */
+}
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 16px;
+    color: white;
+    font-size: 10px;
+    margin-top: 56px; /* Espaço entre o conteúdo e o rodapé */
 }
 
-/* Media query para garantir que em telas menores o layout seja o do mobile */
-@media (max-width: 768px) {
-    #container {
-        width: 360px;
-    }
-
-    ul {
-        flex-direction: column;
-        gap: 16px;
-    }
+footer p {
+    margin: 0;
 }
