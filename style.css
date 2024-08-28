@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+
+#container {   
+    width: 360px;
+    margin: 56px auto 0px;
+    text-align: center;
+}
+
+#profile {
+    padding: 24px;
+}
+
+#profile img {
+    display: block;
+    width: 90px;
+    margin: auto;
+    padding: 4px;
+    border-radius: 50%; /* Para deixar a imagem circular */
+}
+
+#profile p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 8px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaçamento entre os itens */
+    padding: 0;
+    margin-top: 16px; /* Espaço entre o @ e os links */
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px; /* Para deixar as caixas com bordas arredondadas */
+    text-decoration: none;
+    color: white; /* Mantém o texto branco */
+    font-weight: 500;
+}
+
+ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Efeito ao passar o mouse */
+}
