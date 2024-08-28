@@ -5,15 +5,17 @@
 }
 
 body {
-    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    background: url(./assets/bg-desktop.jpg) no-repeat top center/cover;
     font-family: "Inter", sans-serif;
     color: white;
 }
 
-#container {   
-    width: 360px;
+#container {
+    width: 100%;
+    max-width: 1200px; /* Ajusta a largura máxima do container para telas maiores */
     margin: 56px auto 0px;
     text-align: center;
+    padding: 0 20px; /* Adiciona algum padding para evitar que o conteúdo encoste nas bordas da tela */
 }
 
 #profile {
@@ -22,22 +24,22 @@ body {
 
 #profile img {
     display: block;
-    width: 90px;
+    width: 150px; /* Aumenta o tamanho da imagem de perfil para desktop */
     margin: auto;
     padding: 4px;
-    border-radius: 50%; /* Para deixar a imagem circular */
+    border-radius: 50%;
 }
 
 #profile p {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 18px; /* Aumenta o tamanho da fonte para desktop */
+    line-height: 22px;
     margin-top: 8px;
 }
 
 #profile p1 {
     font-weight: 400;
-    font-size: 10px;
+    font-size: 12px; /* Aumenta o tamanho da fonte para desktop */
     line-height: 16px;
     margin-top: 8px;
 }
@@ -45,28 +47,38 @@ body {
 ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
-    gap: 16px; /* Espaçamento entre os itens */
+    flex-direction: row; /* Muda a direção para linha no desktop */
+    justify-content: center;
+    gap: 32px; /* Aumenta o espaçamento entre os itens no desktop */
     padding: 0;
-    margin-top: 16px; /* Espaço entre o @ e os links */
+    margin-top: 32px; /* Aumenta o espaço entre o @ e os links no desktop */
 }
 
 ul li a {
-    
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 16px 24px;
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgb(255, 255, 255, 0.5);
-    border-radius: 8px; /* Para deixar as caixas com bordas arredondadas */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
     text-decoration: none;
-    color: white; /* Mantém o texto branco */
-    font-weight: 500;
+    color: white;
     font-weight: bold;
-    
 }
 
 ul li a:hover {
-    background: rgba(255, 255, 255, 0.2); /* Efeito ao passar o mouse */
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Media query para garantir que em telas menores o layout seja o do mobile */
+@media (max-width: 768px) {
+    #container {
+        width: 360px;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 16px;
+    }
 }
